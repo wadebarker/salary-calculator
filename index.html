@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./style.css">
+	<title>Document</title>
+</head>
+<body>
+	<div class="container">
+		<h2>Калькулятор зарплаты по выбранным критериям</h2>
+		<form onsubmit="handleSubmitForm(event)">
+			<fieldset class="form-fieldset">
+				<legend>Калькулятор зарплаты</legend>
+				<fieldset>
+					<legend>Сколько дней вы хотите работать</legend>
+					<input type="number" name="days" placeholder="Количество дней" min="0" max="365" step="1" value="10" />
+				</fieldset>
+				<fieldset>
+					<legend>Ваша часовая ставка в рублях</legend>
+					<input type="number" name="rate" placeholder="Часовая ставка" min="100" max="5000" step="10" value="500" />
+				</fieldset>
+				<fieldset>
+					<legend>Сколько часов в день вы готовы работать</legend>
+					<select name="hours" id="hours">
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8" selected>8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+					</select>
+				</fieldset>
+				<fieldset>
+					<legend>С какого дня вы готовы работать</legend>
+					<select name="day" id="day">
+						<option value="ПН">Понедельник</option>
+						<option value="ВТ">Вторник</option>
+						<option value="СР">Среда</option>
+						<option value="ЧТ">Четверг</option>
+						<option value="ПТ">Пятница</option>
+						<option value="СБ">Суббота</option>
+						<option value="ВСКР">Воскресенье</option>
+					</select>
+				</fieldset>
+				<button>Рассчитать сумму</button>
+			</fieldset>
+		</form>
+		<h2>
+			Требования к форме:
+		</h2>
+		<h3>Поле "Количество дней"</h3>
+		<ul>
+			<li>Дни указываются в целых числах</li>
+			<li>Дни считаются от 0 до 365 включительно</li>
+		</ul>
+		<h3>Поле "Часовая ставка"</h3>
+		<ul>
+			<li>Часовая ставка указывается в целых числах</li>
+			<li>Часовая ставка имеет значения от 100 до 5000 рублей включительно</li>
+			<li>Шаг часовой ставки - 10 рублей</li>
+		</ul>
+		<h3>Поле "Количество рабочих часов в день"</h3>
+		<ul>
+			<li>Часы указываются в целых числах</li>
+			<li>Значения варьируются от 4 до 12 часов включительно</li>
+		</ul>
+		<h3>Поле "День недели"</h3>
+		<ul>
+			<li>Дни недели указаны с понедельника по воскресенье</li>
+			<li>Можно выбрать только один день</li>
+		</ul>
+		<div>
+			После нажатия на кнопку "Рассчитать сумму" происходит рассчёт количества заработанных денег по формуле:
+			<p>Часовая ставка * Количество часов в день * Количество дней</p>
+			<p>P.S. Важно учитывать, что суббота и воскресенье являются выходными днями, за которые зарплата не начисляется</p>
+		</div>
+	</div>
+	<script src="./main.js"></script>
+</body>
+</html>

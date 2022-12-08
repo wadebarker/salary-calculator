@@ -1,0 +1,52 @@
+html,
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Arial, Helvetica, sans-serif
+}
+
+.container {
+	width: 1280px;
+	margin: 0 auto;
+}
+
+input {
+	height: 20px;
+	width: 120px;
+	font-size: 14px;
+}
+
+select {
+	width: 130px;
+	font-size: 16px;
+}
+
+select {
+	cursor: pointer;
+}
+
+button {
+	margin-top: 20px;
+	padding: 10px 20px;
+	background: deepskyblue;
+	color: white;
+	font-size: 20px;
+	border-radius: 10px;
+	border: none;
+	cursor: pointer;
+	transition: background 0.5s;
+}
+
+button:hover {
+	background: aqua;
+}
+
+.salary {
+	margin: 20px 0;
+}
+
+.salary-number {
+	padding: 3px 5px;
+	border-radius: 5px;
+	background: paleturquoise;
+}
